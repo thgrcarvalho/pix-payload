@@ -8,15 +8,21 @@ Brazil's Pix has no native recurring-payment primitive. Every QR code or copy-an
 
 ## Installation
 
-Add to your `build.gradle`:
-
+**Gradle:**
 ```groovy
 dependencies {
     implementation 'io.github.thgrcarvalho:pix-payload:0.1.0'
 }
 ```
 
-> Maven Central publishing is coming. Until then, clone and `./gradlew publishToMavenLocal`.
+**Maven:**
+```xml
+<dependency>
+    <groupId>io.github.thgrcarvalho</groupId>
+    <artifactId>pix-payload</artifactId>
+    <version>0.1.0</version>
+</dependency>
+```
 
 ## Usage
 
