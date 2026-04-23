@@ -1,5 +1,7 @@
 # pix-payload
 
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.thgrcarvalho/pix-payload)](https://central.sonatype.com/artifact/io.github.thgrcarvalho/pix-payload)
+
 Zero-dependency Java 21 library for encoding and decoding **Pix Copia e Cola** (copy-and-paste) strings, following the EMV-QRCPS-MPM specification with the Brazilian Pix extensions defined by Banco Central do Brasil.
 
 ## Why this exists
