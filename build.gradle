@@ -29,6 +29,12 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 
+javadoc {
+    // internal package is an implementation detail — not part of the public API
+    exclude '**/internal/**'
+    options.addStringOption('Xdoclint:all,-missing', '-quiet')
+}
+
 publishing {
     publications {
         mavenJava(MavenPublication) {
