@@ -2,6 +2,7 @@ plugins {
     id 'java-library'
     id 'maven-publish'
     id 'signing'
+    id 'com.gradleup.nmcp' version '1.4.4'
 }
 
 group = 'io.github.thgrcarvalho'
@@ -70,4 +71,12 @@ signing {
     def signingPassword = findProperty('signingPassword')
     useInMemoryPgpKeys(signingKey, signingPassword)
     sign publishing.publications.mavenJava
+}
+
+nmcp {
+    publishAllPublicationsToCentralPortal {
+        username = providers.gradleProperty('sonatypeUsername')
+        password = providers.gradleProperty('sonatypePassword')
+        publishingType = 'AUTOMATIC'
+    }
 }
